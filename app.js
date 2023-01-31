@@ -29,7 +29,7 @@ const localHostMongoDB = `mongodb://127.0.0.1:27017/api-nutritionniste`;
 const urlMongoDBExterne = `mongodb+srv://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
 // Connection
-mongoose.connect(urlMongoDBExterne, {
+mongoose.connect(localHostMongoDB, {
   useNewUrlParser: true,
 });
 
@@ -62,7 +62,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 // Regle le problème d'accès au serveur par proxy full access
 app.use((req, res, next) => {
+  req.accepts('application/json');
+  res.header('Access-Control-Allow-Methods', 'POST, GET');
   res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Content-Type, Access-Control-Allow-Headers, X-Requested-With'
+  );
   next();
 });
 
