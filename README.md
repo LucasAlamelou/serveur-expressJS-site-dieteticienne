@@ -1,6 +1,6 @@
 # Mini serveur Express.js
 
-Le projet était un évaluation en cours de formation ayant pour but de réaliser un site web pour une nutritionniste.
+Le projet était un évaluation en cours de formation(entrainement) ayant pour but de réaliser un site web de A-Z pour une nutritionniste.
 
 ## Database en MongoDB
 
@@ -8,8 +8,9 @@ Le projet était un évaluation en cours de formation ayant pour but de réalise
 
 ### `Le lien du serveur`
 
-[http://localhost:3000](http://localhost:3000) .
+[https://serveur-dieteticienne-ecf.herokuapp.com](https://serveur-dieteticienne-ecf.herokuapp.com) <br>
+De nombreuses routes sont disponible afin de se connecter, récupèrer, modifier et supprimer des utilsateurs, des recettes, des allergènes et des régimes.
 
-### `Note`
+### `Note sur le projet`
 
-Pour ce projet la partie front-end est disponible sur mon gitHub au [http://localhost:3000](http://localhost:3000)
+Pour ce projet la partie front-end développer en React.JS (une première pour moi ce framework 😄) est disponible sur mon gitHub au : [bien tôt disponible](http://github.com/LucasAlamelou)
