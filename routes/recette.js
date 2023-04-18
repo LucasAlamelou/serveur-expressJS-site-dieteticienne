@@ -1,31 +1,31 @@
 const {
-  recetteCreate,
-  getRecettesWithToken,
-  getRecettesWihoutToken,
-  modifyRecette,
-  removeRecette,
-  addNote,
+    recetteCreate,
+    getRecettesWithToken,
+    getRecettesWihoutToken,
+    modifyRecette,
+    removeRecette,
+    addNote,
 } = require('../Controllers/recette');
 
 // Toutes les routes pour users
 
 function recetteRoute(app) {
-  // Create user
-  app.post('/recetteCreate', recetteCreate);
+    // Create user
+    app.post('/recetteCreate', recetteCreate);
 
-  // Get recettes
-  app.get('/recettes/:token', getRecettesWithToken);
+    // Get recettes
+    app.get('/recettes/:token', getRecettesWithToken);
 
-  app.get('/recettes', getRecettesWihoutToken);
+    app.get('/recettes', getRecettesWihoutToken);
 
-  // Modify recette
-  app.post('/recetteModify', modifyRecette);
+    // Modify recette
+    app.put('/recetteModify', modifyRecette);
 
-  // Delete recette
-  app.delete('/recetteDelete', removeRecette);
+    // Delete recette
+    app.delete('/recetteDelete', removeRecette);
 
-  // Add note in recette
-  app.post('/recetteAddNote', addNote);
+    // Add note in recette
+    app.post('/recetteAddNote', addNote);
 }
 
 module.exports = recetteRoute;

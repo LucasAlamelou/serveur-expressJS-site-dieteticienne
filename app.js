@@ -29,7 +29,7 @@ const localHostMongoDB = `mongodb://127.0.0.1:27017/api-nutritionniste`;
 const urlMongoDBExterne = `mongodb+srv://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
 // Connection
-mongoose.connect(urlMongoDBExterne, {
+mongoose.connect(localHostMongoDB, {
   useNewUrlParser: true,
 });
 

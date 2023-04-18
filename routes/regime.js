@@ -3,17 +3,17 @@ const { regimeCreate, getRegimes, modifyRegime, removeRegime } = require('../Con
 // Toutes les routes pour regime
 
 function regimeRoute(app) {
-  // Create regime
-  app.post('/regimeCreate', regimeCreate);
+    // Create regime
+    app.post('/regimeCreate', regimeCreate);
 
-  // Get regimes
-  app.get('/regimes', getRegimes);
+    // Get regimes
+    app.get('/regimes', getRegimes);
 
-  // Modify regime
-  app.post('/regimeModify', modifyRegime);
+    // Modify regime
+    app.put('/regimeModify', modifyRegime);
 
-  // Delete regime
-  app.delete('/regimeDelete', removeRegime);
+    // Delete regime
+    app.delete('/regimeDelete', removeRegime);
 }
 
 module.exports = regimeRoute;
